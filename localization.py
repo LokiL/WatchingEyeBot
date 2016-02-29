@@ -14,3 +14,4 @@ inviteLinkForOtherChats = 'Пригласить тебя ко мне в изме
 contactSkype = 'Skype создателя: ten_millionfireflies'
 getCodeBot = 'Исходный код бота: https://github.com/LokiL/WatchingEyeBot \nИспользуемый API: https://github.com/eternnoir/pyTelegramBotAPI'
 exceptionText = 'Exception raised!'
+dealText = 'Кто-то сказал \'сделка\'? И что же ты хочешь от меня, а, мягкотелый?'

@@ -3,7 +3,7 @@ import telebot
 import config
 import botToken #contains token = '<token_here>'
 import localization
-from functions import getRandomFurryArt
+import functions
 
 bot = telebot.TeleBot(botToken.token)
 
@@ -87,7 +87,7 @@ def send_message(message):
 @bot.message_handler(commands=['furryart'])
 def send_message(message):
 	try:
-		photo = open(str(getRandomFurryArt()), 'rb')
+		photo = open(str(functions.getRandomFurryArt()), 'rb')
 		bot.send_photo(message.chat.id, photo)
 	except Exception:
 		msg = bot.send_message(message.chat.id, localization.exceptionText)
@@ -98,6 +98,16 @@ def send_message(message):
 		msg = bot.send_message(message.chat.id, str(message.chat.id))
 	except Exception:
 		msg = bot.send_message(message.chat.id, localization.exceptionText)
+		
+@bot.message_handler(commands=['deal'])
+def send_sticker(message):
+	try:
+		DealSticker = ''
+		DealSticker = open(functions.getCurrentDir() + '\Stickers\BillDeal.webp', 'rb')
+		bot.send_sticker(message.chat.id, DealSticker)		
+		msg = bot.send_message(message.chat.id, localization.dealText)
+	except Exception:
+		msg = bot.send_sticker(message.chat.id, localization.exceptionText)
 
 	
 

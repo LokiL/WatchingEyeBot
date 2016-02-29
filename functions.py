@@ -1,4 +1,4 @@
-from os import listdir, path
+from os import listdir, path, getcwd
 from random import choice
 
 def getRandomFurryArt():
@@ -6,6 +6,15 @@ def getRandomFurryArt():
 	filename = choice(listdir(dir))
 	fPath = path.join(dir, filename)
 	return fPath
+
+def getCurrentDir():
+	cPath = ''
+	cPath = getcwd()
+	return cPath
+
+if __name__ == "__main__":
+	print(getCurrentDir())
+	
 
 	#messageLast = ''
 

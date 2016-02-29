@@ -1,11 +1,13 @@
-Привет, одножизненный, трехразмерный, пятичувственный, обтянутый кожей человечек! Я Билл v.b.0.3
+Привет, одножизненный, трехразмерный, пятичувственный, обтянутый кожей человечек! Я Билл v.b.0.5
 Список команд: 
 /help, /commands - этот текст; 
 /contact - связаться с создателем;
 /furryart - случайный фурриарт. Возможно NSFW!
+/deal - сделка с Биллом. Вы уверены, что хотите этого?
 =====================================
-Hello, you one-life-spanned, three-dimensional, five-sensed skin puppet! I am Bill v.b.0.3
+Hello, you one-life-spanned, three-dimensional, five-sensed skin puppet! I am Bill v.b.0.5
 List of commands:
 /help, /commands - that text;
 /contact - contact with the creator;
 /furryart - random furry art. Perhaps to be NSFW!
+/deal - deal with Bill Cipher. Are you really sure?
