@@ -1,10 +1,4 @@
-token = "188416436:AAEPjL3vCBOYD-A9WTEzPCo2WjvnT0y5j9I"
-rules = open("rules.txt", "rb").read()
-command_list = open("commands.txt", "rb").read()
-welcome_message = open("welcome_message.txt", "rb").read()
-welcomeMessageForOtherChats = open("welcome_message_for_other_chats.txt", "rb").read()
-invitelink = "https://telegram.me/joinchat/AX0jxAjUDG3hVpYiXaS_-Q"
+inviteLink = "https://telegram.me/joinchat/AX0jxAjUDG3hVpYiXaS_-Q"
 furryGamersChatId = -148114541
 furryYiffLoverChatId = 0 #tmp
 otterspaceId = 0 #tmp
-errorRules = 'Прости, в моем измерении не записаны правила для этого чата!'

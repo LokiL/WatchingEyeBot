@@ -1,102 +1,103 @@
 # -*- coding: utf-8 -*-
 import telebot
 import config
+import botToken #contains token = '<token_here>'
+import localization
 from functions import getRandomFurryArt
 
-bot = telebot.TeleBot(config.token)
+bot = telebot.TeleBot(botToken.token)
 
 @bot.message_handler(commands=['help', 'commands', 'start'])
 def send_message(message):
 	if message.chat.id == config.furryGamersChatId: #Блок для чата Furry Gamers
 		try:
-			msg = bot.send_message(message.chat.id, config.command_list)
+			msg = bot.send_message(message.chat.id, localization.startMessageFull)
 		except Exception:
-			msg = bot.send_message(message.chat.id, 'Exception raised')
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
 	else:
 		try:
-			msg = bot.send_message(message.chat.id, config.welcomeMessageForOtherChats)
+			msg = bot.send_message(message.chat.id, localization.startMessageShort)
 		except Exception:
-			msg = bot.send_message(message.chat.id, 'Exception raised')
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
 
 @bot.message_handler(commands=['rules'])
 def send_message(message):
 	if message.chat.id == config.furryGamersChatId: #Блок для чата Furry Gamers
 		try:
-			msg = bot.send_message(message.chat.id, config.rules)
+			msg = bot.send_message(message.chat.id, localization.rulesForFG)
 		except Exception:
-			msg = bot.send_message(message.chat.id, 'Exception raised')
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
 	else:
 		try:
-			msg = bot.send_message(message.chat.id, 'Правила? Правило одно - никаких правил! Только безумие!')
+			msg = bot.send_message(message.chat.id, localization.rulesForOtherChats)
 		except Exception:
-			msg = bot.send_message(message.chat.id, 'Exception raised')
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
 		
 
 @bot.message_handler(commands=['voice', 'raidcall'])
 def send_message(message):
 	if message.chat.id == config.furryGamersChatId: #Блок для чата Furry Gamers
 		try:
-			msg = bot.send_message(message.chat.id, 'RaidCall: 12362665')
+			msg = bot.send_message(message.chat.id, localization.voiceForFG)
 		except Exception:
-			msg = bot.send_message(message.chat.id, 'Exception raised')
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
 	else:
 		try:
-			msg = bot.send_message(message.chat.id, 'Прости, трехмерный, эта информация закрыта! Кстати, оленьи зубы не нужны?')
+			msg = bot.send_message(message.chat.id, localization.voiceForOtherChats)
 		except Exception:
-			msg = bot.send_message(message.chat.id, 'Exception raised')
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
 
 @bot.message_handler(commands=['contact'])
 def send_message(message):
 	try:
-		msg = bot.send_message(message.chat.id, 'Skype создателя: ten_millionfireflies')
+		msg = bot.send_message(message.chat.id, localization.contactSkype)
 	except Exception:
-		msg = bot.send_message(message.chat.id, 'Exception raised')
+		msg = bot.send_message(message.chat.id, localization.exceptionText)
 
 @bot.message_handler(content_types=['new_chat_participant'])
 def send_message(message):
 	if message.chat.id == config.furryGamersChatId: #Блок для чата Furry Gamers
 		try:
-			msg = bot.send_message(message.chat.id, config.welcome_message)
+			msg = bot.send_message(message.chat.id, localization.newChatParticipantMessage)
 		except Exception:
-			msg = bot.send_message(message.chat.id, 'Exception raised')
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
 	else:
 		pass
 	
 @bot.message_handler(commands=['getcode'])
 def send_message(message):
 	try:
-		msg = bot.send_message(message.chat.id, 'https://github.com/eternnoir/pyTelegramBotAPI')
+		msg = bot.send_message(message.chat.id, localization.getCodeBot)
 	except Exception:
-		msg = bot.send_message(message.chat.id, 'Exception raised')
+		msg = bot.send_message(message.chat.id, localization.exceptionText)
 
 @bot.message_handler(commands=['invitelink'])
 def send_message(message):
 	if message.chat.id == config.furryGamersChatId: #Блок для чата Furry Gamers
 		try:
-			msg = bot.send_message(message.chat.id, config.invitelink)
+			msg = bot.send_message(message.chat.id, config.inviteLink)
 		except Exception:
-			msg = bot.send_message(message.chat.id, 'Exception raised')
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
 	else:
 		try:
-			msg = bot.send_message(message.chat.id, 'Пригласить тебя ко мне в измерение? А ты уверен, что так хочешь этого?')
+			msg = bot.send_message(message.chat.id, localization.inviteLinkForOtherChats)
 		except Exception:
-			msg = bot.send_message(message.chat.id, 'Exception raised')
-		
-	
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
+			
 @bot.message_handler(commands=['furryart'])
 def send_message(message):
 	try:
 		photo = open(str(getRandomFurryArt()), 'rb')
 		bot.send_photo(message.chat.id, photo)
 	except Exception:
-		msg = bot.send_message(message.chat.id, 'Exception raised')
+		msg = bot.send_message(message.chat.id, localization.exceptionText)
 
 @bot.message_handler(commands=['getchatid'])
 def send_message(message):
 	try:
 		msg = bot.send_message(message.chat.id, str(message.chat.id))
 	except Exception:
-		msg = bot.send_message(message.chat.id, 'Exception raised')
+		msg = bot.send_message(message.chat.id, localization.exceptionText)
 
 	
 
