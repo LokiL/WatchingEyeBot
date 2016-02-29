@@ -1,0 +1,11 @@
+Привет, одножизненный, трехразмерный, пятичувственный, обтянутый кожей человечек! Я Билл v.b.0.3
+Список команд: 
+/help, /commands - этот текст; 
+/contact - связаться с создателем;
+/furryart - случайный фурриарт. Возможно NSFW!
+=====================================
+Hello, you one-life-spanned, three-dimensional, five-sensed skin puppet! I am Bill v.b.0.3
+List of commands:
+/help, /commands - that text;
+/contact - contact with the creator;
+/furryart - random furry art. Perhaps to be NSFW!
