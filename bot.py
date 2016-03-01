@@ -139,9 +139,17 @@ def send_message(message):
 			msg = bot.send_message(message.chat.id, localization.unauthorizedAccessDeny)
 		except Exception:
 			msg = bot.send_message(message.chat.id, localization.exceptionText)		
-
-	
-
+			
+@bot.message_handler(commands=['google'])
+def send_message(message):
+	try:
+		parsedString = functions.getParsed(message.text, '/google')
+		searchResults = functions.getGoogleResult(parsedString[2])
+		msg = bot.send_message(message.chat.id, searchResults)
+	except Exception:
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
+			
+			
 bot.polling()
 
 while True:
