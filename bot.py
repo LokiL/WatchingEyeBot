@@ -50,7 +50,7 @@ def send_message(message):
 @bot.message_handler(commands=['contact'])
 def send_message(message):
 	try:
-		msg = bot.send_message(message.chat.id, localization.contactSkype)
+		msg = bot.send_message(message.chat.id, localization.masterContacts)
 	except Exception:
 		msg = bot.send_message(message.chat.id, localization.exceptionText)
 
@@ -83,6 +83,11 @@ def send_message(message):
 			msg = bot.send_message(message.chat.id, config.inviteLink)
 		except Exception:
 			msg = bot.send_message(message.chat.id, localization.exceptionText)
+	# elif message.chat.id == config.furryYiffLoverChatId:
+		# try:
+			# msg = bot.send_message(message.chat.id, config.inviteLinkForFurryYiffLover)
+		# except Exception:
+			# msg = bot.send_message(message.chat.id, localization.exceptionText)		
 	else:
 		try:
 			msg = bot.send_message(message.chat.id, localization.inviteLinkForOtherChats)
@@ -99,10 +104,17 @@ def send_message(message):
 
 @bot.message_handler(commands=['getchatid'])
 def send_message(message):
-	try:
-		msg = bot.send_message(message.chat.id, str(message.chat.id))
-	except Exception:
-		msg = bot.send_message(message.chat.id, localization.exceptionText)
+	if message.from_user.id == config.masterUserId: 
+		try:
+			msg = bot.send_message(message.chat.id, str(message.chat.id))
+		except Exception:
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
+	else:
+		try:
+			msg = bot.send_message(message.chat.id, localization.unauthorizedAccessDeny)
+		except Exception:
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
+		
 		
 @bot.message_handler(commands=['deal'])
 def send_sticker(message):
@@ -112,7 +124,21 @@ def send_sticker(message):
 		bot.send_sticker(message.chat.id, DealSticker)		
 		msg = bot.send_message(message.chat.id, localization.dealText)
 	except Exception:
-		msg = bot.send_sticker(message.chat.id, localization.exceptionText)
+		msg = bot.send_message(message.chat.id, localization.exceptionText)
+		
+@bot.message_handler(commands=['messageinfo'])
+def send_message(message):
+	if message.from_user.id == config.masterUserId: 
+		try:
+			msg = bot.send_message(message.chat.id, str(message))
+			msg = bot.send_message(message.chat.id, str(message.from_user.id))
+		except Exception:
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
+	else:
+		try:
+			msg = bot.send_message(message.chat.id, localization.unauthorizedAccessDeny)
+		except Exception:
+			msg = bot.send_message(message.chat.id, localization.exceptionText)		
 
 	
 

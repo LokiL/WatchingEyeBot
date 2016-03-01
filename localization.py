@@ -4,15 +4,18 @@ rulesForOtherChats = 'Правила? Правило одно - никаких �
 voiceForFG = 'RaidCall: 12362665'
 voiceForOtherChats = 'Прости, трехмерный, эта информация закрыта! Ты всего лишь пятичувственный, не поймешь...'
 
+unauthorizedAccessDeny = 'Ага, сейчас, мясной мешок, только очки протру!'
+
 newChatParticipantMessage = open("newChatParticipant.txt", "rb").read() #дефолтное сообщение для newChatParticipant
 newChatParticipantMessageForYL = open("newChatParticipantForYiffLover.txt", "rb").read()
 
 startMessageFull = open("startMessageFull.txt", "rb").read() #сообщение для start, help, commands для чата FG
 startMessageShort = open("startMessageShort.txt", "rb").read() #сообщение для start, help, commands для других чатов
 
+
 inviteLinkForOtherChats = 'Пригласить тебя ко мне в измерение? А ты уверен, что так хочешь этого?'
 
-contactSkype = 'Skype создателя: ten_millionfireflies'
+masterContacts = 'Skype создателя: ten_millionfireflies, tlgrm: @ten_million_fireflies'
 getCodeBot = 'Исходный код бота: https://github.com/LokiL/WatchingEyeBot \nИспользуемый API: https://github.com/eternnoir/pyTelegramBotAPI'
 exceptionText = 'Exception raised!'
 dealText = 'Кто-то сказал \'сделка\'? И что же ты хочешь от меня, а, мягкотелый?'
