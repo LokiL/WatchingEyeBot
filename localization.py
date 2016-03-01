@@ -5,6 +5,7 @@ voiceForFG = 'RaidCall: 12362665'
 voiceForOtherChats = 'Прости, трехмерный, эта информация закрыта! Ты всего лишь пятичувственный, не поймешь...'
 
 newChatParticipantMessage = open("newChatParticipant.txt", "rb").read() #дефолтное сообщение для newChatParticipant
+newChatParticipantMessageForYL = open("newChatParticipantForYiffLover.txt", "rb").read()
 
 startMessageFull = open("startMessageFull.txt", "rb").read() #сообщение для start, help, commands для чата FG
 startMessageShort = open("startMessageShort.txt", "rb").read() #сообщение для start, help, commands для других чатов

@@ -61,6 +61,11 @@ def send_message(message):
 			msg = bot.send_message(message.chat.id, localization.newChatParticipantMessage)
 		except Exception:
 			msg = bot.send_message(message.chat.id, localization.exceptionText)
+	elif message.chat.id == config.furryYiffLoverChatId:
+		try:
+			msg = bot.send_message(message.chat.id, localization.newChatParticipantMessageForYL)
+		except Exception:
+			msg = bot.send_message(message.chat.id, localization.exceptionText)
 	else:
 		pass
 	
