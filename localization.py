@@ -5,6 +5,7 @@ voiceForFG = 'RaidCall: 12362665'
 voiceForOtherChats = 'Прости, трехмерный, эта информация закрыта! Ты всего лишь пятичувственный, не поймешь...'
 
 unauthorizedAccessDeny = 'Ага, сейчас, мясной мешок, только очки протру!'
+searchEmpty = 'Тебе найти пустоту? Давай я уберу у тебя из организма кровь? Вот и найдешь!'
 
 newChatParticipantMessage = open("newChatParticipant.txt", "rb").read() #дефолтное сообщение для newChatParticipant
 newChatParticipantMessageForYL = open("newChatParticipantForYiffLover.txt", "rb").read()

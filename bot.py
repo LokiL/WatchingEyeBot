@@ -142,10 +142,19 @@ def send_message(message):
 			
 @bot.message_handler(commands=['google'])
 def send_message(message):
-	try:
-		parsedString = functions.getParsed(message.text, '/google')
-		searchResults = functions.getGoogleResult(parsedString[2])
-		msg = bot.send_message(message.chat.id, searchResults)
+	try:		
+		if message.text == '/google':
+			try:
+				msg = bot.send_message(message.chat.id, localization.searchEmpty)
+			except Exception:
+				msg = bot.send_message(message.chat.id, localization.exceptionText)
+		else:
+			try:
+				parsedString = functions.getParsed(message.text, '/google')
+				searchResults = functions.getGoogleResult(parsedString[2])
+				msg = bot.send_message(message.chat.id, searchResults)
+			except Exception:
+				msg = bot.send_message(message.chat.id, localization.exceptionText)
 	except Exception:
 			msg = bot.send_message(message.chat.id, localization.exceptionText)
 			

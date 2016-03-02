@@ -1,11 +1,11 @@
-Добро пожаловать в чат Furry gamers! 
+Добро пожаловать в чат Furry lovers! 
 Я бот, Билл v.b.0.7
-Этот чат предназначен для общения на тему игр и поиска пати среди пушистых.
-Пожалуйста, обратите внимание на то, что с 10:00 до 21:00 по Московскому времени это SFW-чат со всеми вытекающими.
+Этот чат предназначен для пушистого общения и поиска группы для онлайн-игр.
+Пожалуйста, обратите внимание на то, что с 10:00 до 21:00 по Московскому времени нежелательно NSFW, поскольку многие участники сидят в нем на работе.
 Рекомендуем вам ознакомиться с полными правилами чата с помощью команды /rules
 Список команд бота - /commands, /help
 =====================================
-Welcome to the Furry gamers chat room!
+Welcome to the Furry lovers chat room!
 I am a bot, Bill v.b.0.7
 This chat created for communication on the subject of games and the search party among furs.
 Please note what from 10:00 to 21:00 (GMT+3) there is SFW-chat with all the consequences.
