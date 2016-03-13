@@ -154,12 +154,15 @@ def send_message(message):
 				searchResults = functions.getGoogleResult(parsedString[2])
 				msg = bot.send_message(message.chat.id, searchResults)
 			except Exception:
-				msg = bot.send_message(message.chat.id, localization.exceptionText)
+				msg = bot.send_message(message.chat.id, Exception)
 	except Exception:
 			msg = bot.send_message(message.chat.id, localization.exceptionText)
 			
-			
-bot.polling()
+try:
+	bot.polling(none_stop=False)
+except Exception:
+	print('Exception raised!')
+	pass
 
 while True:
 	pass
