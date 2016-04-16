@@ -46,16 +46,7 @@ def getGoogleResult(searchQuery):
 	listOfResults = dictToList(results.search())
 	strOfResults = listToStr(listOfResults)
 	return cleanString(strOfResults) #возвращает форматированную строку с результатами поиска
-
-
-
-
-
-
 	
-
-	
-
 if __name__ == "__main__":
 	#print(getCurrentDir())
 	#print(parseString('/google testestest testest ', '/google'))

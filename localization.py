@@ -1,3 +1,4 @@
+import config
 rulesForFG = open("rulesForFG.txt", "rb").read() #rules for FG
 rulesForOtherChats = 'Правила? Правило одно - никаких правил! Только безумие! Кстати, не хочешь оленьих зубов?'
 
@@ -12,9 +13,10 @@ newChatParticipantMessageForYL = open("newChatParticipantForYiffLover.txt", "rb"
 
 startMessageFull = open("startMessageFull.txt", "rb").read() #сообщение для start, help, commands для чата FG
 startMessageShort = open("startMessageShort.txt", "rb").read() #сообщение для start, help, commands для других чатов
+moderatorsList = open("moderatorsList.txt", "rb").read()
 
 
-inviteLinkForOtherChats = 'Пригласить тебя ко мне в измерение? А ты уверен, что так хочешь этого?'
+inviteLinkForOtherChats = 'Пригласить тебя ко мне в измерение? А ты уверен, что так хочешь этого? Ну ладно! Просто иди сюда: ' + config.inviteLink
 
 masterContacts = 'Skype создателя: ten_millionfireflies, tlgrm: @ten_million_fireflies'
 getCodeBot = 'Исходный код бота: https://github.com/LokiL/WatchingEyeBot \nИспользуемый API: https://github.com/eternnoir/pyTelegramBotAPI'
