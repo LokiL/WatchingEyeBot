@@ -175,7 +175,7 @@ def send_message(message):
 @bot.message_handler(commands=['google'])
 def send_message(message):
 	try:		
-		if message.text == '/google':
+		if message.text == '/google' or message.text == '/google@WatchingEyeBot':
 			try:
 				msg = bot.send_message(message.chat.id, localization.searchEmpty)
 			except Exception:
@@ -193,7 +193,7 @@ def send_message(message):
 @bot.message_handler(commands=['moderators'])
 def send_message(message):
 	try:
-		msg = bot.send_message(message.chat.id, str(localization.moderatorsList))
+		msg = bot.send_message(message.chat.id, localization.moderatorsList)
 	except Exception:
 		msg = bot.send_message(message.chat.id, localization.exceptionText)
 
